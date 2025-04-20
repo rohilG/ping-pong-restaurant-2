@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 47.9 95.8% 53.1%;
+    --primary-foreground: 26 83.3% 14.1%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 57 40% 42%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 20 14.3% 4.1%;
+    --radius: 0.5rem;
+
+    /* Custom colors from Figma */
+    --ping-pong-red: 357 65% 50%;  /* #c13c45 */
+    --ping-pong-cream: 43 67% 90%; /* #f5e7c5 */
+    --ping-pong-olive: 57 40% 42%; /* #8a7c35 */
+    --ping-pong-gold: 45 30% 44%;  /* #93814d */
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 47.9 95.8% 53.1%;
+    --primary-foreground: 26 83.3% 14.1%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 35.5 91.7% 32.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#f5e7c5] text-foreground;
+    font-family: var(--font-poppins), sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), serif;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .font-script {
+    font-family: var(--font-dancing-script), cursive;
+  }
+
+  .bg-ping-pong-cream {
+    background-color: #f5e7c5;
+  }
+
+  .bg-ping-pong-olive {
+    background-color: #8a7c35;
+  }
+
+  .bg-ping-pong-gold {
+    background-color: #93814d;
+  }
+
+  .text-ping-pong-red {
+    color: #c13c45;
+  }
+
+  .text-ping-pong-gold {
+    color: #93814d;
+  }
+}
